@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="itinerary-light">
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark"><img src="logo.png" alt="Trip Planner logo" class="logo-img" /></div>
+      <div>
+        <h1>Admin Dashboard</h1>
+        <p>View all registered users and their saved trips.</p>
+      </div>
+    </div>
+    <nav class="topnav admin-nav">
+      <a href="#registered-users">Users</a>
+      <a href="#admin-controls">Admin controls</a>
+      <a href="login.html">Register user</a>
+    </nav>
+  </header>
+
+  <main class="container admin-page">
+    <section class="panel page-intro">
+      <div>
+        <h2>Admin dashboard</h2>
+        <p>Manage registered users, review saved itineraries, and keep the system running smoothly.</p>
+      </div>
+
+      <div class="stats admin-stats">
+        <div class="stat">
+          <strong id="admin-user-count">0</strong>
+          <span>Registered users</span>
+        </div>
+        <div class="stat">
+          <strong id="admin-trip-count">0</strong>
+          <span>Saved trips</span>
+        </div>
+        <div class="stat">
+          <strong id="admin-recent-user">—</strong>
+          <span>Newest user</span>
+        </div>
+        <div class="stat">
+          <strong id="admin-top-traveler">—</strong>
+          <span>Top traveler</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="registered-users">
+      <h2>Registered users</h2>
+      <div class="admin-search-row">
+        <label>
+          Search users
+          <input type="search" id="admin-search" placeholder="Search by name or email" />
+        </label>
+      </div>
+      <div id="user-list" class="admin-list"></div>
+    </section>
+
+    <aside class="panel admin-actions admin-controls-drawer" id="admin-controls">
+      <div class="admin-controls-header">
+        <h2>Admin controls</h2>
+        <button id="admin-controls-close" type="button" class="button button-secondary">Close</button>
+      </div>
+      <button id="refresh-admin" class="button button-secondary">Refresh data</button>
+      <button id="reset-search" class="button button-secondary">Reset filter</button>
+      <button id="logout-admin" class="button button-secondary">Logout</button>
+      <p class="field-note">Filter users by name or email, then reset to restore the full list.</p>
+    </aside>
+  </main>
+  <div id="admin-controls-backdrop" class="admin-controls-backdrop"></div>
+
+  <footer>
+    <p>Admin can monitor user logins and saved itinerary data.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

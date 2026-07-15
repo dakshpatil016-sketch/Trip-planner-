@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trip Planner</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="itinerary-light">
+  <header class="topbar animate-fade-up">
+    <div class="brand">
+      <div class="brand-mark"><img src="logo.png" alt="Trip Planner logo" class="logo-img" /></div>
+      <div>
+        <h1>Trip Planner</h1>
+        <p>Plan your next adventure with a complete itinerary builder and smart arrival guidance.</p>
+      </div>
+    </div>
+    <nav class="topnav">
+      <a href="#build">Plan</a>
+      <a href="#preview">Preview</a>
+      <a href="#features">Features</a>
+      <a href="#itinerary">My Trip</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-copy animate-fade-up" style="animation-delay: 0.1s">
+      <span class="badge">Find your Gateway</span>
+      <p class="hero-greeting" id="user-greeting"></p>
+      <h2>Launch your next getaway with a modern travel planner.</h2>
+      <p>Create inspiring routes, manage budgets, and preview every day before departure. This homepage blends beautiful visuals with fast planning tools.</p>
+      <div class="hero-metrics">
+        <div>
+          <strong>150+</strong>
+          <span>Destinations</span>
+        </div>
+        <div>
+          <strong>24/7</strong>
+          <span>Smart planning</span>
+        </div>
+        <div>
+          <strong>4.9</strong>
+          <span>Traveler score</span>
+        </div>
+      </div>
+      <div class="hero-actions">
+        <a href="#build" class="button">Start planning</a>
+        <a href="#preview" class="button button-secondary">See sample itinerary</a>
+      </div>
+    </div>
+
+    <div class="hero-visual animate-pop" style="animation-delay: 0.25s">
+      <div class="hero-image" style="background-image:url('Image/Bangkok.jpg')"></div>
+      <div class="hero-card">
+        <img src="Image/Paris.jpg" alt="Beach scene" />
+        <div>
+          <strong>Arrival ready</strong>
+          <p>Quickly build the perfect first day with top attractions, stay ideas, and packing notes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="landing-highlights animate-fade-up" style="animation-delay: 0.35s">
+    <div class="highlight-card">
+      <strong>Clear trip overview</strong>
+      <p>Plan flights, hotels, and daily activities in a single clean dashboard.</p>
+    </div>
+    <div class="highlight-card">
+      <strong>Map-powered planning</strong>
+      <p>See your selected destination and route instantly while you create the trip.</p>
+    </div>
+    <div class="highlight-card">
+      <strong>Mobile-friendly design</strong>
+      <p>Built to feel fast and polished on phones, tablets, and desktops alike.</p>
+    </div>
+  </section>
+
+  <section class="feature-strip animate-fade-up" id="features" style="animation-delay: 0.45s">
+    <article class="feature-card">
+      <img src="Image/London.jpg" alt="Historic city streets" />
+      <div>
+        <h3>Curated city inspiration</h3>
+        <p>Explore responsive destination cards with highlights, local flavor, and arrival ideas for every route.</p>
+      </div>
+    </article>
+    <article class="feature-card">
+      <img src="Image/Tokyo.jpg" alt="Passport and map" />
+      <div>
+        <h3>Bright arrival motion</h3>
+        <p>Enjoy subtle motion and vivid imagery that make your trip page feel polished and inviting.</p>
+      </div>
+    </article>
+    <article class="feature-card">
+      <img src="Image/Singapore.jpg" alt="Travel itinerary planning" />
+      <div>
+        <h3>Smart itinerary insights</h3>
+        <p>Receive travel-ready suggestions that help you choose the best routes, activities, and local experiences for each day.</p>
+      </div>
+    </article>
+  </section>
+
+  <main class="container" id="build">
+    <section class="panel">
+      <h2>Build your trip</h2>
+
+      <form id="trip-form" class="field-group">
+        <div class="inline-grid">
+          <label>
+            Starting city
+            <input type="text" id="start-city" list="city-list" placeholder="e.g. San Francisco" required />
+          </label>
+          <label>
+            Destination
+            <input type="text" id="destination" list="city-list" placeholder="e.g. Tokyo" required />
+          </label>
+        </div>
+
+        <datalist id="city-list">
+          <option value="New York"></option>
+          <option value="Los Angeles"></option>
+          <option value="Chicago"></option>
+          <option value="San Francisco"></option>
+          <option value="Miami"></option>
+          <option value="London"></option>
+          <option value="Paris"></option>
+          <option value="Tokyo"></option>
+          <option value="Dubai"></option>
+          <option value="Sydney"></option>
+          <option value="Barcelona"></option>
+          <option value="Rome"></option>
+          <option value="Bangkok"></option>
+          <option value="Singapore"></option>
+        </datalist>
+
+        <div class="inline-grid">
+          <label>
+            Departure date
+            <input type="text" id="depart-date" placeholder="dd/mm/yyyy" inputmode="numeric" autocomplete="off" pattern="\d{2}/\d{2}/\d{4}" title="Use dd/mm/yyyy format" required />
+            <span class="date-preview" id="depart-preview">dd/mm/yyyy</span>
+          </label>
+          <label>
+            Return date
+            <input type="text" id="return-date" placeholder="dd/mm/yyyy" inputmode="numeric" autocomplete="off" pattern="\d{2}/\d{2}/\d{4}" title="Use dd/mm/yyyy format" required />
+            <span class="date-preview" id="return-preview">dd/mm/yyyy</span>
+          </label>
+        </div>
+
+        <label>
+          Travel style
+          <select id="travel-style">
+            <option value="relaxing">Relaxing vacation</option>
+            <option value="adventure">Adventure trip</option>
+            <option value="business">Business travel</option>
+            <option value="family">Family getaway</option>
+          </select>
+        </label>
+
+        <div class="inline-grid">
+          <label>
+            Total budget
+            <input type="number" id="total-budget" placeholder="e.g. 2500" min="0" step="0.01" />
+          </label>
+          <label>
+            Daily estimate
+            <input type="number" id="daily-budget" placeholder="e.g. 180" min="0" step="0.01" />
+          </label>
+        </div>
+
+        <label>
+          Notes & priorities
+          <textarea id="notes" rows="4" placeholder="Add activities, budget notes, or packing reminders, plus your favorite sights and food stops..."></textarea>
+        </label>
+
+        <button type="submit">Create itinerary</button>
+      </form>
+
+      <div class="stats" aria-label="Trip overview stats">
+        <div class="stat">
+          <strong id="trip-days">0</strong>
+          <span>Days planned</span>
+        </div>
+        <div class="stat">
+          <strong id="trip-city">—</strong>
+          <span>Destination</span>
+        </div>
+        <div class="stat">
+          <strong id="trip-style">—</strong>
+          <span>Travel style</span>
+        </div>
+        <div class="stat">
+          <strong id="trip-budget">—</strong>
+          <span>Estimated budget</span>
+        </div>
+      </div>
+    </section>
+
+    <aside class="panel" id="preview">
+      <h2>Your itinerary</h2>
+      <div class="itinerary" id="itinerary-cards">
+        <div class="card">
+          <strong>No trip yet</strong>
+          <small>Use the planner form to generate your first itinerary.</small>
+        </div>
+      </div>
+
+      <div class="map-placeholder" id="map-preview" aria-label="Map preview">
+        <p>Map preview and travel route appear here.</p>
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    <p>Designed as a lightweight trip planner starter page.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

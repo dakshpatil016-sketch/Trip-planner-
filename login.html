@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trip Planner Login</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="auth-light">
+  <header class="topbar auth-hero">
+    <div class="brand">
+      <div class="brand-mark"><img src="logo.png" alt="Trip Planner logo" class="logo-img" /></div>
+      <div class="brand-content">
+        <h1>Trip Planner Login</h1>
+        <p>Sign in to save trips and access the planner. Admin login is available on a separate page.</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container auth-page">
+    <section class="panel">
+      <h2>User login / register</h2>
+      <form id="user-login-form" class="field-group">
+        <label>
+          Full name
+          <input type="text" id="user-name" placeholder="Your full name" />
+        </label>
+        <label>
+          Email
+          <input type="email" id="user-email" placeholder="you@example.com" required />
+        </label>
+        <label>
+          Password
+          <div class="password-field">
+            <input type="password" id="user-password" placeholder="Enter a password" required />
+            <button type="button" class="password-toggle" data-input="user-password" aria-label="Show password">Show</button>
+          </div>
+        </label>
+        <button type="submit">Continue as user</button>
+      </form>
+      <p class="field-note">If this email is new, an account will be created automatically. Then you can use these credentials to log in again.</p>
+    </section>
+  </main>
+
+  <footer>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

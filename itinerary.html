@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trip Itinerary</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="itinerary-light">
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark"><img src="logo.png" alt="Trip Planner logo" class="logo-img" /></div>
+      <div>
+        <h1>Your Trip Itinerary</h1>
+        <p>Review your travel plan, see destination highlights, and follow a day-by-day guide for the city you selected.</p>
+      </div>
+    </div>
+    <nav class="topnav">
+      <a href="index.html">Home</a>
+      <a href="login.html">Login</a>
+      <a href="itinerary.html">Itinerary</a>
+    </nav>
+  </header>
+
+  <main class="container itinerary-page">
+    <section class="panel" id="summary-panel">
+      <div class="page-intro">
+        <span class="badge">Custom itinerary</span>
+        <h2 id="hero-title">Your travel plan is ready</h2>
+        <p id="hero-copy">Get a tailored daily schedule, top local attractions, and a complete city guide for your trip.</p>
+      </div>
+
+      <div class="trip-stats" id="trip-stats"></div>
+
+      <div class="itinerary" id="trip-summary"></div>
+      <div class="map-placeholder" id="itinerary-map" aria-label="Destination map preview">
+        <p>Map of your selected destination appears here.</p>
+      </div>
+      <div class="itinerary" id="daily-plan"></div>
+    </section>
+
+    <aside class="panel" id="city-panel">
+      <h2>City guide</h2>
+      <div class="itinerary" id="city-details"></div>
+      <div class="button-row">
+        <button id="back-button" type="button">Edit trip</button>
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    <p>Based on the cities listed in your planner, this itinerary gives you the top places to visit and a simple daily plan.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

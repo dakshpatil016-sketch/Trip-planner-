@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login - Trip Planner</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="auth-light">
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark"><img src="logo.png" alt="Trip Planner logo" class="logo-img" /></div>
+      <div class="brand-content">
+        <h1>Admin Login</h1>
+        <p>Enter the master admin ID and password to access the admin dashboard.</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container auth-page">
+    <section class="panel">
+      <h2>Admin access</h2>
+      <form id="admin-login-form" class="field-group">
+        <label>
+          Admin ID (master email)
+          <input type="email" id="admin-email" placeholder="Admin email" required />
+        </label>
+        <label>
+          Admin password
+          <div class="password-field">
+            <input type="password" id="admin-password" placeholder="Admin password" required />
+            <button type="button" class="password-toggle" data-input="admin-password" aria-label="Show password">Show</button>
+          </div>
+        </label>
+        <label class="checkbox-row">
+          <input type="checkbox" id="admin-remember" />
+          Remember this device
+        </label>
+        <button type="submit">Login as admin</button>
+      </form>
+      <p class="field-note">This page is only for the master admin login. User login stays on the main login page.</p>
+      <p class="field-note">Back to <a href="login.html">user login</a>.</p>
+      <p class="field-note">Need help? Contact <a href="mailto:support@tripplanner.com">support@tripplanner.com</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Admin login for dashboard access only.</p>
+  </footer>
+
+  <div style="position: fixed; top: 20px; right: 20px; background: #f0f0f0; border: 1px solid #ccc; border-radius: 8px; padding: 15px; font-size: 12px; max-width: 200px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); z-index: 1000;">
+    <strong>Test Credentials:</strong>
+    <div style="margin-top: 8px; font-family: monospace; line-height: 1.6;">
+      <div><strong>ID:</strong> admin@example.com</div>
+      <div><strong>Pass:</strong> password123</div>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
